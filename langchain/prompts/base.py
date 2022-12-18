@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional, Union
 
 import yaml
+from jinja2 import Template
 from pydantic import BaseModel, Extra, root_validator
 
 from langchain.formatting import formatter
