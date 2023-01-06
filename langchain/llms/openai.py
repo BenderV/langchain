@@ -54,7 +54,7 @@ class BaseOpenAI(BaseLLM, BaseModel):
     """Batch size to use when passing multiple documents to generate."""
     request_timeout: Optional[Union[float, Tuple[float, float]]] = None
     """Timeout for requests to OpenAI completion API. Default is 600 seconds."""
-    logit_bias: Optional[Dict[str, float]] = {}
+    logit_bias: Optional[Dict[str, float]] = Field(default_factory=dict)
     """Adjust the probability of specific tokens being generated."""
 
     class Config:
